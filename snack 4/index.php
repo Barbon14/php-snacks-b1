@@ -9,10 +9,17 @@
 
     <?php
         $numbers =[];
-
+        $min = 1;
+        $max = 50;
         while (count($numbers) <= 15) {
-            
+            $number = rand($min, $max);
+
+            if (!in_array($number, $numbers)) {
+                $numbers[] = $number;
+            }
         }
+
+        var_dump($numbers);
 
     ?>
 </head>
